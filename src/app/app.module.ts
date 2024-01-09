@@ -6,6 +6,7 @@ import { CargarNotasComponent } from './components/cargar-notas/cargar-notas.com
 import { VerNotasComponent } from './components/ver-notas/ver-notas.component';
 import { AppRoutingModule } from './app-routing.module';
 import { WelcomeComponent } from './components/welcome/welcome.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { WelcomeComponent } from './components/welcome/welcome.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
