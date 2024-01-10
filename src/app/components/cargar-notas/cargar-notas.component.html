@@ -1,17 +1,17 @@
 <!-- <p>cargar-notas works!</p> -->
 
 
-<div class="container"> 
+<div class="container">
 
     <div class="alert alert-primary" role="alert">
         Cargar Notas:
-      </div>
+    </div>
 
-    <form>
+    <form [formGroup]="formularioCargaNotas">
 
         <div class="form-group">
             <label for="materia">Seleccionar Materia</label>
-            <select class="form-control" id="materia">
+            <select class="form-control" id="materia" formControlName="materia">
                 <option>Lengua</option>
                 <option>Quimica</option>
                 <option>bla</option>
@@ -22,7 +22,7 @@
 
         <div class="form-group">
             <label for="exampleFormControlSelect1">Seleccionar Alumno</label>
-            <select class="form-control" id="exampleFormControlSelect1">
+            <select class="form-control" id="exampleFormControlSelect1" formControlName="alumno">
                 <option>Lautaro</option>
                 <option>Flor</option>
                 <option>bla</option>
@@ -34,11 +34,11 @@
         <div class="form-group">
             <label for="exampleInputNota">Nota</label>
             <input type="number" class="form-control" id="exampleInputNota" aria-describedby="emailHelp"
-                placeholder="Ingrese nota" [formControl]= "nota">
+                placeholder="Ingrese nota" formControlName="nota">
             <small id="emailHelp" class="form-text text-muted">Debe ser mayor a 1</small>
         </div>
 
-        <button type="button" class="btn btn-success" (click)="mostrarNota()">Success</button>
+        <button type="button" class="btn btn-success" (click)="mostrarDatosFormulario()" >Cargar</button>
 
 
     </form>

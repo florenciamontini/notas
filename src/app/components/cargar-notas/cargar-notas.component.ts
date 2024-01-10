@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { FormBuilder, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-cargar-notas',
@@ -7,10 +7,17 @@ import { FormControl } from '@angular/forms';
   styleUrls: ['./cargar-notas.component.css']
 })
 export class CargarNotasComponent {
-  nota = new FormControl('');
+  constructor(private formbuilder: FormBuilder) { }
 
-  mostrarNota(){
-    alert(this.nota.value);
-    console.log(this.nota.value);
+  formularioCargaNotas = this.formbuilder.group({
+    materia: ['', Validators.required],
+    alumno: ['', Validators.required],
+    nota: ['', [Validators.required, Validators.min(1)]]
+  });
+
+  mostrarDatosFormulario(): void {
+    console.log(this.formularioCargaNotas.value);
   }
+
+  
 }
