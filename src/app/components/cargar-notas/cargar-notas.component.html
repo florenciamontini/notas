@@ -13,10 +13,7 @@
             <label for="materia">Seleccionar Materia</label>
             <select class="form-control" id="materia" formControlName="materia">
                 <option>Lengua</option>
-                <option>Quimica</option>
-                <option>bla</option>
-                <option>4</option>
-                <option>5</option>
+
             </select>
         </div>
 
@@ -24,10 +21,7 @@
             <label for="exampleFormControlSelect1">Seleccionar Alumno</label>
             <select class="form-control" id="exampleFormControlSelect1" formControlName="alumno">
                 <option>Lautaro</option>
-                <option>Flor</option>
-                <option>bla</option>
-                <option>4</option>
-                <option>5</option>
+
             </select>
         </div>
 
@@ -38,9 +32,15 @@
             <small id="emailHelp" class="form-text text-muted">Debe ser mayor a 1</small>
         </div>
 
-        <button type="button" class="btn btn-success" (click)="mostrarDatosFormulario()" >Cargar</button>
+        <div class="alert alert-danger" role="alert" *ngIf="esNotaVacia"> 
+            Este campo no puede quedar vacío!
+          </div>
 
+
+        <button type="button" class="btn btn-success" (click)="mostrarDatosFormulario()" >Cargar</button>
 
     </form>
 
 </div>
+
+
