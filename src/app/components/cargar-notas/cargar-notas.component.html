@@ -12,7 +12,7 @@
         <div class="form-group">
             <label for="materia">Seleccionar Materia</label>
             <select class="form-control" id="materia" formControlName="materia">
-                <option>Lengua</option>
+                <option *ngFor="let nombremateria of materias">{{nombremateria}}</option>
 
             </select>
         </div>
@@ -34,6 +34,10 @@
 
         <div class="alert alert-danger" role="alert" *ngIf="esNotaVacia"> 
             Este campo no puede quedar vacío!
+          </div>
+
+        <div class="alert alert-danger" role="alert" *ngIf="esNotaNegativa"> 
+            La nota no puede ser un nro. negativo!
           </div>
 
 
