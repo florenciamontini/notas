@@ -10,7 +10,8 @@ import { FormBuilder, FormControl, NonNullableFormBuilder, Validators } from '@a
 export class CargarNotasComponent {
   esNotaVacia: boolean = false; // Variable para rastrear si 'nota' está vacío
   esNotaNegativa: boolean = false;
-  materias = ['literatura', 'matematica','algoritmos'];
+  materias = ['literatura', 'matematica','algoritmos','naturales','geografia','economia'];
+  alumnos = ['florencia','lautaro']
   constructor(private formbuilder: FormBuilder) { }
   
   formularioCargaNotas = this.formbuilder.group({

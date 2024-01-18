@@ -12,6 +12,7 @@
         <div class="form-group">
             <label for="materia">Seleccionar Materia</label>
             <select class="form-control" id="materia" formControlName="materia">
+                <option disabled selected value="">Selecciona una materia</option>
                 <option *ngFor="let nombremateria of materias">{{nombremateria}}</option>
 
             </select>
@@ -20,7 +21,8 @@
         <div class="form-group">
             <label for="exampleFormControlSelect1">Seleccionar Alumno</label>
             <select class="form-control" id="exampleFormControlSelect1" formControlName="alumno">
-                <option>Lautaro</option>
+                <option disabled selected value="">Selecciona un alumno</option>
+                <option *ngFor="let nombrealumno of alumnos">{{nombrealumno}}</option>
 
             </select>
         </div>
