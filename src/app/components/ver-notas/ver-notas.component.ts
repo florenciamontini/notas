@@ -10,6 +10,7 @@ import { Alumno, Materia, Nota } from 'src/app/models/alumno_model';
 export class VerNotasComponent {
   alumnos: Alumno[] = [];
   materia = new FormControl('');
+  materias = ['literatura', 'matematica','algoritmos','naturales','geografia','economia'];
 
   ngOnInit() {
     const matematicas = new Materia(1, 'Matemáticas');

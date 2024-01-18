@@ -7,8 +7,9 @@
                 <div class="form-group">
                     <label for="exampleFormControlSelect1">Seleccionar Materia</label>
                     <select class="form-control" id="exampleFormControlSelect1" [formControl]="materia">
-                        <option>Lengua</option>
-
+                        <option disabled selected value="">Selecciona una materia</option>
+                        <option *ngFor="let nombremateria of materias">{{nombremateria}}</option>
+        
                     </select>
                 </div>
 
